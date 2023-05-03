@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { ensureAuthenticated } = require('../controllers/authMiddleware');
+const { ensureAuthenticated } = require('../authMiddleware');
 const {
     renderDashboard,
     renderNewPost,

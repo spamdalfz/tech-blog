@@ -1,11 +1,32 @@
-const router = require('express').Router();
+const renderHomepage = async (req, res) => {
+    //  logic to fetch and display blog posts on the homepage
+};
 
-const homeRoutes = require('./routes/homeRoutes');
-const userRoutes = require('./routes/userRoutes');
-const dashboardRoutes = require('./routes/dashboardRoutes');
+const renderLogin = (req, res) => {
+    res.render('login');
+};
 
-router.use('/', homeRoutes);
-router.use('/users', userRoutes);
-router.use('/dashboard', dashboardRoutes);
+const loginUser = async (req, res) => {
+    //  logic to authenticate the user and log them in
+};
 
-module.exports = router;
+const renderSignup = (req, res) => {
+    res.render('signup');
+};
+
+const registerUser = async (req, res) => {
+    // logic to create a new user account and log them in
+};
+
+const logoutUser = (req, res) => {
+    // logic to log the user out
+};
+
+module.exports = {
+    renderHomepage,
+    renderLogin,
+    loginUser,
+    renderSignup,
+    registerUser,
+    logoutUser,
+};
