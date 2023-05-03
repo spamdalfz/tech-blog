@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { ensureAuthenticated } = require('../authMiddleware');
+const { ensureAuthenticated } = require('../controllers/authMiddleware');
 const {
     renderDashboard,
     renderNewPost,
@@ -8,7 +8,7 @@ const {
     renderEditPost,
     updatePost,
     deletePost,
-} = require('../controllers/dashboardController');
+} = require('../controllers/dashBoardCtrl');
 
 // Dashboard route
 router.get('/', ensureAuthenticated, renderDashboard);
