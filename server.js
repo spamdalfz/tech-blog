@@ -19,7 +19,10 @@ app.use(session({
   secret: process.env.SESSION_SECRET,
   store: new SequelizeStore({ db: sequelize }),
   resave: false,
-  saveUninitialized: true,
+  saveUninitialized: false,
+  cookie: {
+    maxAge: 30 * 60 * 1000, // 30 minutes
+  }
 }));
 
 app.use(routes);
