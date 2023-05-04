@@ -40,5 +40,5 @@ const models = {
     Post,
     Comment,
 };
-
+// export models to be used elsewhere in application
 module.exports = models;
