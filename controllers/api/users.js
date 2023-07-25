@@ -1,18 +1,8 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User } = require('../../models/Index');
 const withAuth = require('../auth');
 
 // GET all users
-router.get('/', (req, res) => {
-    User.findAll({
-        attributes: { exclude: ['password'] }
-    })
-        .then(dbUserData => res.json(dbUserData))
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
-});
 
 // GET a single user by id
 router.get('/:id', (req, res) => {
